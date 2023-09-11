@@ -1,0 +1,268 @@
+{
+  "id": "3598558",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "88612",
+      "name": "notice_fill",
+      "font_class": "noticefill",
+      "unicode": "e709",
+      "unicode_decimal": 59145
+    },
+    {
+      "icon_id": "217418",
+      "name": "notice",
+      "font_class": "notice4",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1433628",
+      "name": "notice",
+      "font_class": "notice5",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "431893",
+      "name": "news",
+      "font_class": "news",
+      "unicode": "e772",
+      "unicode_decimal": 59250
+    },
+    {
+      "icon_id": "505287",
+      "name": "news",
+      "font_class": "news1",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "598201",
+      "name": "notice",
+      "font_class": "notice",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "691844",
+      "name": "media",
+      "font_class": "media",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "1160181",
+      "name": "notice",
+      "font_class": "notice1",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "1251432",
+      "name": "news",
+      "font_class": "news2",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "1512542",
+      "name": "news_light",
+      "font_class": "news_light",
+      "unicode": "e7e6",
+      "unicode_decimal": 59366
+    },
+    {
+      "icon_id": "3749910",
+      "name": "051-science",
+      "font_class": "-science",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "5634344",
+      "name": "school",
+      "font_class": "school",
+      "unicode": "f0a7",
+      "unicode_decimal": 61607
+    },
+    {
+      "icon_id": "7454284",
+      "name": "media",
+      "font_class": "media1",
+      "unicode": "e6f1",
+      "unicode_decimal": 59121
+    },
+    {
+      "icon_id": "7541975",
+      "name": "24gl-school",
+      "font_class": "24gl-school",
+      "unicode": "e836",
+      "unicode_decimal": 59446
+    },
+    {
+      "icon_id": "7695432",
+      "name": "school",
+      "font_class": "school1",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "8040235",
+      "name": "ts-图标_mediaserver",
+      "font_class": "ts-tubiao_mediaserver",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "10246124",
+      "name": "notice",
+      "font_class": "notice2",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "11835354",
+      "name": "notice",
+      "font_class": "notice3",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "14418902",
+      "name": "media",
+      "font_class": "media2",
+      "unicode": "e72d",
+      "unicode_decimal": 59181
+    },
+    {
+      "icon_id": "14929915",
+      "name": "多媒体硬件Multimedia Hardware (2)",
+      "font_class": "duomeitiyingjianMultimediaHardware2",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "17967857",
+      "name": "science",
+      "font_class": "science",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "20937581",
+      "name": "campus",
+      "font_class": "campus",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "24529866",
+      "name": "bachelor-science",
+      "font_class": "bachelor-science",
+      "unicode": "e6bf",
+      "unicode_decimal": 59071
+    },
+    {
+      "icon_id": "1555794",
+      "name": "list",
+      "font_class": "list",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "8474293",
+      "name": "list",
+      "font_class": "list1",
+      "unicode": "e6be",
+      "unicode_decimal": 59070
+    },
+    {
+      "icon_id": "12025566",
+      "name": "list",
+      "font_class": "list2",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12880824",
+      "name": "list",
+      "font_class": "list3",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "21513638",
+      "name": "list",
+      "font_class": "list4",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
+    },
+    {
+      "icon_id": "11474219",
+      "name": "all",
+      "font_class": "all",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "11474302",
+      "name": "nav-list",
+      "font_class": "nav-list",
+      "unicode": "e6fd",
+      "unicode_decimal": 59133
+    },
+    {
+      "icon_id": "11481287",
+      "name": "all-fill",
+      "font_class": "all-fill",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "11481334",
+      "name": "integral-fill",
+      "font_class": "integral-fill",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
+      "icon_id": "11487977",
+      "name": "arrow-right",
+      "font_class": "arrow-right",
+      "unicode": "e743",
+      "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "11487978",
+      "name": "arrow-left",
+      "font_class": "arrow-left",
+      "unicode": "e744",
+      "unicode_decimal": 59204
+    },
+    {
+      "icon_id": "11488000",
+      "name": "category",
+      "font_class": "category",
+      "unicode": "e747",
+      "unicode_decimal": 59207
+    },
+    {
+      "icon_id": "11488087",
+      "name": "password",
+      "font_class": "password",
+      "unicode": "e75b",
+      "unicode_decimal": 59227
+    },
+    {
+      "icon_id": "12011697",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e7b3",
+      "unicode_decimal": 59315
+    }
+  ]
+}

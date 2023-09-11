@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3598558 */
+  src: url('iconfont.woff2?t=1661655910997') format('woff2'),
+       url('iconfont.woff?t=1661655910997') format('woff'),
+       url('iconfont.ttf?t=1661655910997') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-noticefill:before {
+  content: "\e709";
+}
+
+.icon-notice4:before {
+  content: "\e63e";
+}
+
+.icon-notice5:before {
+  content: "\e60c";
+}
+
+.icon-news:before {
+  content: "\e772";
+}
+
+.icon-news1:before {
+  content: "\e604";
+}
+
+.icon-notice:before {
+  content: "\e61e";
+}
+
+.icon-media:before {
+  content: "\e653";
+}
+
+.icon-notice1:before {
+  content: "\e673";
+}
+
+.icon-news2:before {
+  content: "\e6aa";
+}
+
+.icon-news_light:before {
+  content: "\e7e6";
+}
+
+.icon--science:before {
+  content: "\e65d";
+}
+
+.icon-school:before {
+  content: "\f0a7";
+}
+
+.icon-media1:before {
+  content: "\e6f1";
+}
+
+.icon-24gl-school:before {
+  content: "\e836";
+}
+
+.icon-school1:before {
+  content: "\e65a";
+}
+
+.icon-ts-tubiao_mediaserver:before {
+  content: "\e720";
+}
+
+.icon-notice2:before {
+  content: "\e670";
+}
+
+.icon-notice3:before {
+  content: "\e629";
+}
+
+.icon-media2:before {
+  content: "\e72d";
+}
+
+.icon-duomeitiyingjianMultimediaHardware2:before {
+  content: "\e6a7";
+}
+
+.icon-science:before {
+  content: "\e628";
+}
+
+.icon-campus:before {
+  content: "\e685";
+}
+
+.icon-bachelor-science:before {
+  content: "\e6bf";
+}
+
+.icon-list:before {
+  content: "\e6a3";
+}
+
+.icon-list1:before {
+  content: "\e6be";
+}
+
+.icon-list2:before {
+  content: "\e603";
+}
+
+.icon-list3:before {
+  content: "\e67d";
+}
+
+.icon-list4:before {
+  content: "\e6c6";
+}
+
+.icon-all:before {
+  content: "\e6ef";
+}
+
+.icon-nav-list:before {
+  content: "\e6fd";
+}
+
+.icon-all-fill:before {
+  content: "\e718";
+}
+
+.icon-integral-fill:before {
+  content: "\e726";
+}
+
+.icon-arrow-right:before {
+  content: "\e743";
+}
+
+.icon-arrow-left:before {
+  content: "\e744";
+}
+
+.icon-category:before {
+  content: "\e747";
+}
+
+.icon-password:before {
+  content: "\e75b";
+}
+
+.icon-search:before {
+  content: "\e7b3";
+}
+

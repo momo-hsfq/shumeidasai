@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体看山软</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        font-family: "微软雅黑", "宋体";
+        font-size: 1em;
+        text-size-adjust: none;
+    }
+
+    .top {
+        padding: 1% 2%;
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 60%;
+        margin: 6px 0;
+        overflow: hidden;
+    }
+
+    .f1 {
+        float: left;
+    }
+
+    .topImg {
+        max-width: 100%;
+    }
+
+    .banner {
+        background: url(../Photo/News-03.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 135px;
+    }
+
+    .topTopic {
+        color: #8f161e;
+        width: 150px;
+        margin-block-start: 1em;
+        margin-block-end: 0.2em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        /* padding-inline-start: 40px; */
+        padding: 10px 0 15px 40px;
+        border-bottom: 3px solid #af171fd4;
+    }
+
+    ul li {
+        /* width: 360px; */
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 10px;
+    }
+
+    ul li h4 {
+        margin: 10px 0px 15px;
+        line-height: 24px;
+        font-size: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: normal;
+        color: black;
+        display: block;
+        margin-block-start: 0.8em;
+        margin-block-end: 0.8em;
+        margin-inline-end: 6px;
+        padding-left: 8px;
+
+    }
+
+    ul li p {
+        font-size: 12px;
+        margin-bottom: 0px;
+        color: #999;
+        margin: 0 0 10px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 99px;
+        margin-inline-end: 9px;
+    }
+
+    .timebox {
+        border: 2px solid #8f161e;
+        width: 85px;
+        height: 73px;
+        margin-top: 22px;
+        /* margin-left: 5px; */
+        float: left;
+    }
+
+    .timebox i {
+        height: 30px;
+        color: rgb(255, 255, 255);
+        line-height: 30px;
+        font-size: 15px;
+        background-color: #8f161e;
+        display: block;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .timebox strong {
+        color: #8f161e;
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        font-style: normal;
+        display: block;
+    }
+
+
+    .tablediv table td {
+        font-size: 12px;
+    }
+
+    .tablediv a:visited {
+        text-decoration: none;
+        line-height: 58px;
+    }
+
+    div.tablediv table span,
+    div.tablediv table a.Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+    .tablediv .Prev {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+    .tablediv .SelectList {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+
+    .tablediv .break {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #FFF;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv .Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+    .tablediv .this-page {
+        display: inline-block;
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv a:hover {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+
+    .tablediv a:active {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    div.tablediv table span.active {
+        background: #8f161e;
+        color: #fff;
+    }
+
+    div.tablediv table input {
+        color: #8f161e;
+        font-size: 12px;
+        padding-right: 4px;
+    }
+
+    a:link {
+        color: black;
+    }
+
+    /* 未访问链接*/
+    a:visited {
+        color: black;
+    }
+
+    /* 已访问链接 */
+    a:hover {
+        color: #FF00FF;
+    }
+
+    /* 鼠标移动到链接上 */
+    a:active {
+        color: #0000FF;
+    }
+
+    /* 鼠标点击时 */
+    a:link {
+        text-decoration: none;
+    }
+
+    /* unvisited link */
+    a:visited {
+        text-decoration: none;
+    }
+
+    /* visited link */
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* mouse over link */
+    a:active {
+        text-decoration: underline;
+    }
+
+    /* selected link */
+</style>
+
+<body>
+    <div class="containerWrap">
+        <!-- 顶部 -->
+        <div class="top">
+            <a href="../MainPage.html" class="logo f1">
+                <img class="topImg" src="../Photo/logo.png">
+            </a>
+        </div>
+
+        <div class="banner">
+
+        </div>
+
+        <div class="topTopic">
+            媒体看山软
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>29</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/0728中国网/0728中国网.html">
+                        <h4>山东大学承办第15届中国计算机设计大赛济南决赛区比赛</h4>
+                        <p>中新网山东新闻7月29日电 7月23日至7月25日，由中国大学生计算机设计大赛组织委员会主办，山东大学...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/0728中国城市网.html">
+                        <h4>山东大学承办第15届中国计算机设计大赛济南决赛区比赛</h4>
+                        <p>7月23日至7月25日，由中国大学生计算机设计大赛组织委员会主办，山东大学承办的2022年（第15届）...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/0728中国网/0728中国网.html">
+                        <h4>山东大学承办第15届中国计算机设计大赛济南决赛区比赛</h4>
+                        <p>7月23日至7月25日，由中国大学生计算机设计大赛组织委员会主办，山东大学承办的2022年（第15届）...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2021.11</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/2021-1128.html">
+                        <h4>山东大学19个项目入选教育部首批新文科研究与改革实践项目</h4>
+                        <p>近日，教育部发布《教育部办公厅关于公布首批新文科研究与改革实践项目的通知》，公布了首批1011个...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2021.10</i>
+                        <strong>29</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/2021-1029/2021-1029.html">
+                        <h4>为国育贤 协同探索 | 山东大学第十七届全国重点中学校长论坛成功举办</h4>
+                        <p>10月29日，山东大学第十七届全国重点中学校长论坛在济南成功举办，山东大学校长樊丽明出席开幕式并致...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2021.10</i>
+                        <strong>20</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/2021-1020.html">
+                        <h4>山东大学举办2021中新高等教育论坛 聚焦未来技术与跨学科高等教育</h4>
+                        <p>10月16日，山东大学联合新加坡南洋理工大学举办了以“未来技术与跨学科高等教育”为主题的中新高等教育论...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2021.10</i>
+                        <strong>19</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/2021-1019/2021-1019.html">
+                        <h4>山大教授：骨刻文的发现意义重大 中华文明五千年不容置疑</h4>
+                        <p>2021年10月17日，“骨刻文研讨会”隆重开幕，本次大会由济南文物保护与收藏协会主办，济南文物保护与收藏...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2021.10</i>
+                        <strong>12</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/2021-1012/2021-1012.html">
+                        <h4>山东大学大力实施服务山东战略，助力山东高质量发展 书写服务山东发展“山大系”答卷</h4>
+                        <p>□ 本 报 记 者 王原...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2021.7</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/2021-0728/2021-0728.html">
+                        <h4>智能时代需要什么人才？专家论道人工智能普及教育</h4>
+                        <p>光明网讯7月26日，以“智能时代 智创未来”为主题的2021年中国人工智能普及教育发展论坛在山东烟台举...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2021.7</i>
+                        <strong>02</strong>
+                    </div>
+                    <a href="./媒体看山软-内容页/2021-0702/2021-0702.html">
+                        <h4>山东大学2021年本科生毕业典礼暨学位授予仪式举行</h4>
+                        <p>6月23日晚，山东大学济南校本部2021年本科生毕业典礼暨学位授予仪式在中心校区操场举行，共同见证毕...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tablediv" style="margin:0 auto 40px auto; padding-top:50px; width: 75%;">
+            <input type="hidden" name="actiontype" value="">
+            <input type="hidden" name="urltype" value="tree.TreeTempUrl">
+            <input type="hidden" name="wbtreeid" value="1103">
+
+            <div>
+                <a href="./导航页媒体看山软.html" class="Prev">首页</a>
+                <a href="./导航页媒体看山软.html" class="Prev">上页</a>
+                <a href="./导航页媒体看山软.html" class="Next">下页</a>
+                <a href="./导航页媒体看山软.html" class="Next">尾页</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

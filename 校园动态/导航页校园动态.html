@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园动态</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        font-family: "微软雅黑", "宋体";
+        font-size: 1em;
+        text-size-adjust: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .top {
+        padding: 1% 2%;
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 60%;
+        margin: 6px 0;
+        overflow: hidden;
+    }
+
+    .f1 {
+        float: left;
+    }
+
+    .topImg {
+        max-width: 100%;
+    }
+
+    .banner {
+        background: url(../photo/News-03.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 135px;
+    }
+
+    .topTopic {
+        color: #8f161e;
+        width: 150px;
+        margin-block-start: 1em;
+        margin-block-end: 0.2em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        /* padding-inline-start: 40px; */
+        padding: 10px 0 15px 40px;
+        border-bottom: 3px solid #af171fd4;
+    }
+
+    ul li {
+        /* width: 360px; */
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 10px;
+    }
+
+    ul li h4 {
+        margin: 10px 0px 15px;
+        line-height: 24px;
+        font-size: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: normal;
+        color: black;
+        display: block;
+        margin-block-start: 0.8em;
+        margin-block-end: 0.8em;
+        margin-inline-end: 6px;
+        padding-left: 8px;
+
+    }
+
+    ul li p {
+        font-size: 12px;
+        margin-bottom: 0px;
+        color: #999;
+        margin: 0 0 10px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 99px;
+        margin-inline-end: 9px;
+    }
+
+    .timebox {
+        border: 2px solid #8f161e;
+        width: 85px;
+        height: 73px;
+        margin-top: 22px;
+        /* margin-left: 5px; */
+        float: left;
+    }
+
+    .timebox i {
+        height: 30px;
+        color: rgb(255, 255, 255);
+        line-height: 30px;
+        font-size: 15px;
+        background-color: #8f161e;
+        display: block;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .timebox strong {
+        color: #8f161e;
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        font-style: normal;
+        display: block;
+    }
+
+
+    .tablediv table td {
+        font-size: 12px;
+    }
+
+    .tablediv a:visited {
+        text-decoration: none;
+        line-height: 58px;
+    }
+
+    div.tablediv table span,
+    div.tablediv table a.Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+    .tablediv .Prev {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .SelectList {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+
+    .tablediv .break {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #FFF;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv .Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .this-page {
+        display: inline-block;
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv a:hover {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+
+    .tablediv a:active {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    div.tablediv table span.active {
+        background: #8f161e;
+        color: #fff;
+    }
+
+    div.tablediv table input {
+        color: #8f161e;
+        font-size: 12px;
+        padding-right: 4px;
+    }
+</style>
+
+<body>
+    <div class="containerWrap">
+        <!-- 顶部 -->
+        <div class="top">
+            <a href="../MainPage.html" class="logo f1">
+                <img class="topImg" src="../photo/logo.png">
+            </a>
+        </div>
+
+        <div class="banner">
+
+        </div>
+
+        <div class="topTopic">
+            校园动态
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>04</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态1.html">
+                        <h4>软件学院召开2022暑期社会实践培训会
+                        </h4>
+                        <p>为进一步落实暑期社会实践相关工作，保证活动安全有序开展，7月4日，山东大学软件学院召开2022暑期...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>02</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态2.html">
+                        <h4>软件学院2020级本科生召开“功崇惟志、业广惟勤”暑期年级大会
+                        </h4>
+                        <p>7月1日，软件学院2020级本科生召开“功崇惟志、业广惟勤”暑期年级大会，软件学院2020级辅导员邵一丹...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.6</i>
+                        <strong>22</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态3.html">
+                        <h4>软件学院召开2021级“破晓而生，踏浪而行”年级大会
+                        </h4>
+                        <p>6月22日，软件学院召开2021级“破晓而生，踏浪而行”年级大会。会议由2021级本科辅导员孙朋朋主持，...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.5</i>
+                        <strong>18</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态4.html">
+                        <h4>CCF山东大学（济南）学生分会组织开展CSP认证培训
+                        </h4>
+                        <p>作为计算机职业资格认证中的一项重要专项认证，CSP成绩在高校研究生推免申请、互联网企业笔试等方面...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.5</i>
+                        <strong>17</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态5.html">
+                        <h4>软件学院2020级召开系列疫情防控工作部署年级大会</h4>
+                        <p>为强化学生疫情防控意识，筑牢校园疫情防控安全防线，软件学院2020级自3月30日进入封闭管理阶段，多...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态6.html">
+                        <h4>软件学院召开2021级java课设报告经验指导讲座</h4>
+                        <p>4月26日晚，学生会学研科创部学习组召开面向2021级同学的java课设报告经验指导讲座。会议于腾讯会议平...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>25</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态7.html">
+                        <h4>软件学院2021级举办关于如何提升编程能力的主题讲座</h4>
+                        <p>4月24日，山东大学软件学院2021级举办关于如何提升编程能力的主题讲座。讲座于线上进行，副教授鹿旭东担...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>24</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态8.html">
+                        <h4>20级软工4班开展班主任答疑班会</h4>
+                        <p>4月23日下午，2020级软工4班通过线上会议的形式召开班会，班主任黄艳老师参加。会议的主要目的是调解...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>22</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态9.html">
+                        <h4>软件学院2021级举行走进心灵讲座暨年级大会</h4>
+                        <p>为了帮助学生调节疫情封控期间的情绪状态，积极落实防疫工作，4月20日晚，软件学院2021级召开“‘朋’心...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>11</strong>
+                    </div>
+                    <a href="./校园动态内容页/校园动态10.html">
+                        <h4>山东大学软件学院举办乒乓球比赛</h4>
+                        <p>为增强软院学子的体育锻炼意识、切实保障学生在封校期间的身心健康，4月10日，软件学院乒乓球赛于食堂二...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tablediv" style="margin:0 auto 40px auto; padding-top:50px; width: 75%;">
+            <input type="hidden" name="actiontype" value="">
+            <input type="hidden" name="urltype" value="tree.TreeTempUrl">
+            <input type="hidden" name="wbtreeid" value="1103">
+
+            <div>
+                <a href="./导航页校园动态.html" class="Prev">首页</a>
+                <a href="./导航页校园动态.html" class="Prev">上页</a>
+                <a href="./导航页校园动态.html" class="Next">下页</a>
+                <a href="./导航页校园动态.html" class="Next">尾页</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

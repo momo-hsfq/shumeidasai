@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软院新闻</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        font-family: "微软雅黑", "宋体";
+        font-size: 1em;
+        text-size-adjust: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .top {
+        padding: 1% 2%;
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 60%;
+        margin: 6px 0;
+        overflow: hidden;
+    }
+
+    .f1 {
+        float: left;
+    }
+
+    .topImg {
+        max-width: 100%;
+    }
+
+    .banner {
+        background: url(../Photo/News-03.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 135px;
+    }
+
+    .topTopic {
+        color: #8f161e;
+        width: 150px;
+        margin-block-start: 1em;
+        margin-block-end: 0.2em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        /* padding-inline-start: 40px; */
+        padding: 10px 0 15px 40px;
+        border-bottom: 3px solid #af171fd4;
+    }
+
+    ul li {
+        /* width: 360px; */
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 10px;
+    }
+
+    ul li h4 {
+        margin: 10px 0px 15px;
+        line-height: 24px;
+        font-size: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: normal;
+        color: black;
+        display: block;
+        margin-block-start: 0.8em;
+        margin-block-end: 0.8em;
+        margin-inline-end: 6px;
+        padding-left: 8px;
+
+    }
+
+    ul li p {
+        font-size: 12px;
+        margin-bottom: 0px;
+        color: #999;
+        margin: 0 0 10px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 99px;
+        margin-inline-end: 9px;
+    }
+
+    .timebox {
+        border: 2px solid #8f161e;
+        width: 85px;
+        height: 73px;
+        margin-top: 22px;
+        /* margin-left: 5px; */
+        float: left;
+    }
+
+    .timebox i {
+        height: 30px;
+        color: rgb(255, 255, 255);
+        line-height: 30px;
+        font-size: 15px;
+        background-color: #8f161e;
+        display: block;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .timebox strong {
+        color: #8f161e;
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        font-style: normal;
+        display: block;
+    }
+
+
+
+    .tablediv table td {
+        font-size: 12px;
+    }
+
+    .tablediv a:visited {
+        text-decoration: none;
+        line-height: 58px;
+    }
+
+    div.tablediv table span,
+    div.tablediv table a.Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+    .tablediv .Prev {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .SelectList {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+
+    .tablediv .break {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #FFF;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv .Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .this-page {
+        display: inline-block;
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv a:hover {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+
+    .tablediv a:active {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    div.tablediv table span.active {
+        background: #8f161e;
+        color: #fff;
+    }
+
+    div.tablediv table input {
+        color: #8f161e;
+        font-size: 12px;
+        padding-right: 4px;
+    }
+</style>
+
+<body>
+    <div class="containerWrap">
+        <!-- 顶部 -->
+        <div class="top">
+            <a href="../MainPage.html" class="logo f1">
+                <img class="topImg" src="../Photo/logo.png">
+            </a>
+        </div>
+
+        <div class="banner">
+
+        </div>
+
+        <div class="topTopic">
+            软院新闻
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>17</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻1.html">
+                        <h4>山东大学软件学院2022年诚聘海内外优秀人才</h4>
+                        <p>山东大学软件学院成立于2001年，是经教育部和国家发展计划委员会批准建立的首批35所国家示范性软件学院...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>13</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻2.html">
+                        <h4>软件学院召开暑期本科教学研讨会</h4>
+                        <p>8月1日，软件学院在软件园校区办公楼202召开了暑期本科教学研讨会，会议形式为线上线下结合，院长...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>26</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻3.html">
+                        <h4>软件学院举办“暑光行动”之智享学术科普讲座
+                        </h4>
+                        <p>为开拓学生视野，提高学生学科综合素质，7月26日，软件学院举办“暑光行动”之智享学术科普讲座，邀请...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>23</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻4.html">
+                        <h4>我院学子在ICPC-ECfinal中获一银一铜</h4>
+                        <p>7月19-20日，第46届世界大学生程序设计竞赛亚洲区决赛（ICPC-ECFinal）在西安举行。我院两支队伍...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>13</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻5.html">
+                        <h4>软件学院成功举办2022年全国优秀大学生暑期夏令营活动
+                        </h4>
+                        <p>为促进高校间优秀大学生的交流与沟通，增进优秀大学生对山东大学软件学院的了解，激发学生的...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>04</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻6.html">
+                        <h4>软件学院党委赴博山开展红色教育实践活动
+                        </h4>
+                        <p>7月2日、3日，软件学院党委组织部分师生党员赴博山开展红色教育实践活动，汲取红色力量，赓续...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>04</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻7.html">
+                        <h4>东营经济技术开发区领导来访软件学院
+                        </h4>
+                        <p>7月1日，东营经济技术开发区党工委书记、管委会主任康茂礼一行来访软件学院，出席东营市招才引智名校行...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.6</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻8.html">
+                        <h4>山东省软件工程重点实验室开展党建活动</h4>
+                        <p>6月26日，山东省软件工程重点实验室组织部分实验室成员到淄博市博山区开展党建活动。实验室孟祥旭主任...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.6</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻9.html">
+                        <h4>山东省软件工程重点实验室举行数字化转型专家行活动
+                        </h4>
+                        <p>6月25日上午，山东省软件工程重点实验室组织专家深入淄博市博山区企业，开展数字化转型专家行活动...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.6</i>
+                        <strong>19</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻10.html">
+                        <h4>软件学院“海右”博士生学术论坛成功举办
+                        </h4>
+                        <p>2022年6月16日，软件学院于二楼圆厅报告厅成功举办主题为“回答时代之题，彰显科研力量”的...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.6</i>
+                        <strong>19</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻11.html">
+                        <h4>软件学院举办2022届毕业典礼暨毕业联欢会
+                        </h4>
+                        <p>6月18日，软件学院2022届毕业典礼暨毕业联欢会隆重举行。软件学院党委书记王秀丽，院长崔立真...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.6</i>
+                        <strong>15</strong>
+                    </div>
+                    <a href="./软院新闻内容页/软院新闻12.html">
+                        <h4>软件学院“导学思政下午茶”系列活动圆满结束
+                        </h4>
+                        <p>为全面落实全国教育大会和全国研究生教育会议精神，丰富校园文化生活，切实加强研究生思政建设...</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tablediv" style="margin:0 auto 40px auto; padding-top:50px; width: 75%;">
+            <input type="hidden" name="actiontype" value="">
+            <input type="hidden" name="urltype" value="tree.TreeTempUrl">
+            <input type="hidden" name="wbtreeid" value="1103">
+
+            <div>
+                <a href="./导航页软院新闻.html" class="Prev">首页</a>
+                <a href="./导航页软院新闻.html" class="Prev">上页</a>
+                <a href="./导航页软院新闻.html" class="Next">下页</a>
+                <a href="./导航页软院新闻.html" class="Next">尾页</a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

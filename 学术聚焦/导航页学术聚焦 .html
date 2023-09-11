@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学术聚焦</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        font-family: "微软雅黑", "宋体";
+        font-size: 1em;
+        text-size-adjust: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .top {
+        padding: 1% 2%;
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 60%;
+        margin: 6px 0;
+        overflow: hidden;
+    }
+
+    .f1 {
+        float: left;
+    }
+
+    .topImg {
+        max-width: 100%;
+    }
+
+    .banner {
+        background: url(../photo/News-03.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 135px;
+    }
+
+    .topTopic {
+        color: #8f161e;
+        width: 150px;
+        margin-block-start: 1em;
+        margin-block-end: 0.2em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        /* padding-inline-start: 40px; */
+        padding: 10px 0 15px 40px;
+        border-bottom: 3px solid #af171fd4;
+    }
+
+    ul li {
+        /* width: 360px; */
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 10px;
+    }
+
+    ul li h4 {
+        margin: 10px 0px 15px;
+        line-height: 24px;
+        font-size: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: normal;
+        color: black;
+        display: block;
+        margin-block-start: 0.8em;
+        margin-block-end: 0.8em;
+        margin-inline-end: 6px;
+        padding-left: 8px;
+
+    }
+
+    ul li p {
+        font-size: 12px;
+        margin-bottom: 0px;
+        color: #999;
+        margin: 0 0 10px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 99px;
+        margin-inline-end: 9px;
+    }
+
+    .timebox {
+        border: 2px solid #8f161e;
+        width: 85px;
+        height: 73px;
+        margin-top: 22px;
+        /* margin-left: 5px; */
+        float: left;
+    }
+
+    .timebox i {
+        height: 30px;
+        color: rgb(255, 255, 255);
+        line-height: 30px;
+        font-size: 15px;
+        background-color: #8f161e;
+        display: block;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .timebox strong {
+        color: #8f161e;
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        font-style: normal;
+        display: block;
+    }
+
+
+    .tablediv table td {
+        font-size: 12px;
+    }
+
+    .tablediv a:visited {
+        text-decoration: none;
+        line-height: 58px;
+    }
+
+    div.tablediv table span,
+    div.tablediv table a.Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+    .tablediv .Prev {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .SelectList {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+
+    .tablediv .break {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #FFF;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv .Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .this-page {
+        display: inline-block;
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv a:hover {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+
+    .tablediv a:active {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    div.tablediv table span.active {
+        background: #8f161e;
+        color: #fff;
+    }
+
+    div.tablediv table input {
+        color: #8f161e;
+        font-size: 12px;
+        padding-right: 4px;
+    }
+</style>
+
+<body>
+    <div class="containerWrap">
+        <!-- 顶部 -->
+        <div class="top">
+            <a href="../MainPage.html" class="logo f1">
+                <img class="topImg" src="../photo/logo.png">
+            </a>
+        </div>
+
+        <div class="banner">
+
+        </div>
+
+        <div class="topTopic">
+            学术聚焦
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>11</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦2.html">
+                    <h4>看未来系列论坛--可信人工智能国际学术报告</h4>
+                    <p>论坛时间：2022年8月13日（周六）8:50 – 12:30 线下地点：山东大学软件园校区教学楼三区513报告...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>09</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦3.html">
+                    <h4>Streaming Facility Location in High Dimension
+                    </h4>
+                    <p>In Euclidean Uniform Facility Location, the input is a set of clients in R^d and the ...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>18</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦4.html">
+                    <h4>2022年第3届（济南）组合优化与算法研讨会</h4>
+                    <p>组合优化与算法理论是理论计算机科学的主要研究领域之一，是软件学科的基础研究内容，以及计算机科学的...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.6</i>
+                        <strong>13</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦5.html">
+                    <h4>C-FAIR看未来系列论坛--面向后疫情时代的“人、物、场”的STS创新</h4>
+                    <p>社会技术系统（STS)在后疫情时代面临着数字媒体领域的变革，呈现出跨学科、跨专业、融合...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.5</i>
+                        <strong>19</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦6.html">
+                    <h4>C-FAIR看未来系列论坛</h4>
+                    <p>报告人：李玺，浙江大学计算机科学与技术学院教授 报告时间：2022年5月21日 10:00-11:00 会议主持：崔立真教授，院长...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>30</strong>
+                    </div><a href="./学术聚焦内容页/学术聚焦7.html">
+                    <h4>百廿山大 智领未来 C-FAIR看未来系列论坛</h4>
+                    <p>隐私保护的联邦推荐系统</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>22</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦8.html">
+                    <h4>百廿山大 智领未来 C-FAIR看未来系列论坛</h4>
+                    <p>玉米和芒属植物优异基因挖掘及其遗传机理解析</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.4</i>
+                        <strong>01</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦9.html">
+                    <h4>百廿山大 智领未来 C-FAIR看未来系列论坛</h4>
+                    <p>煤质分析中的人工智能方法研究</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.5</i>
+                        <strong>19</strong>
+                    </div>
+                    <a href="./学术聚焦内容页/学术聚焦10.html">
+                    <h4>百廿山大 智领未来 C-FAIR看未来系列论坛</h4>
+                    <p>Initialization for Neural Recommendation Systems</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="tablediv" style="margin:0 auto 40px auto; padding-top:50px; width: 75%;">
+            <input type="hidden" name="actiontype" value="">
+            <input type="hidden" name="urltype" value="tree.TreeTempUrl">
+            <input type="hidden" name="wbtreeid" value="1103">
+
+            <div>
+                <a href="./导航页学术聚焦.html" class="Prev">首页</a>
+                <a href="./导航页学术聚焦.html" class="Prev">上页</a>
+                <a href="./导航页学术聚焦.html" class="Next">下页</a>
+                <a href="./导航页学术聚焦.html" class="Next">尾页</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

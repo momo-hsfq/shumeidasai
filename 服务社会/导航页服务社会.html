@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        font-family: "微软雅黑", "宋体";
+        font-size: 1em;
+        text-size-adjust: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .top {
+        padding: 1% 2%;
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 60%;
+        margin: 6px 0;
+        overflow: hidden;
+    }
+
+    .f1 {
+        float: left;
+    }
+
+    .topImg {
+        max-width: 100%;
+    }
+
+    .banner {
+        background: url(../Photo/News-03.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 135px;
+    }
+
+    .topTopic {
+        color: #8f161e;
+        width: 150px;
+        margin-block-start: 1em;
+        margin-block-end: 0.2em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        /* padding-inline-start: 40px; */
+        padding: 10px 0 15px 40px;
+        border-bottom: 3px solid #af171fd4;
+    }
+
+    ul li {
+        /* width: 360px; */
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 10px;
+    }
+
+    ul li h4 {
+        margin: 10px 0px 15px;
+        line-height: 24px;
+        font-size: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: normal;
+        color: black;
+        display: block;
+        margin-block-start: 0.8em;
+        margin-block-end: 0.8em;
+        margin-inline-end: 6px;
+        padding-left: 8px;
+
+    }
+
+    ul li p {
+        font-size: 12px;
+        margin-bottom: 0px;
+        color: #999;
+        margin: 0 0 10px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 99px;
+        margin-inline-end: 9px;
+    }
+
+    .timebox {
+        border: 2px solid #8f161e;
+        width: 85px;
+        height: 73px;
+        margin-top: 22px;
+        /* margin-left: 5px; */
+        float: left;
+    }
+
+    .timebox i {
+        height: 30px;
+        color: rgb(255, 255, 255);
+        line-height: 30px;
+        font-size: 15px;
+        background-color: #8f161e;
+        display: block;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .timebox strong {
+        color: #8f161e;
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        font-style: normal;
+        display: block;
+    }
+
+
+  .tablediv table td {
+        font-size: 12px;
+    }
+
+    .tablediv a:visited {
+        text-decoration: none;
+        line-height: 58px;
+    }
+
+    div.tablediv table span,
+    div.tablediv table a.Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+    .tablediv .Prev {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .SelectList {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+    }
+
+
+    .tablediv .break {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #FFF;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv .Next {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        background: #8f161e;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .tablediv .this-page {
+        display: inline-block;
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    .tablediv a:hover {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+
+    .tablediv a:active {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+        color: #fff;
+        margin: 0px 5px;
+        border-radius: 3px;
+        background: #8f161e;
+    }
+
+    div.tablediv table span.active {
+        background: #8f161e;
+        color: #fff;
+    }
+
+    div.tablediv table input {
+        color: #8f161e;
+        font-size: 12px;
+        padding-right: 4px;
+    }
+a:link {color:black;}      /* 未访问链接*/
+        a:visited {color:black;}  /* 已访问链接 */
+        a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+        a:active {color:#0000FF;}  /* 鼠标点击时 */
+        a:link {text-decoration:none;}    /* unvisited link */
+        a:visited {text-decoration:none;} /* visited link */
+        a:hover {text-decoration:underline;}   /* mouse over link */
+        a:active {text-decoration:underline;}  /* selected link */
+</style>
+
+<body>
+    <div class="containerWrap">
+        <!-- 顶部 -->
+        <div class="top">
+            <a href="../MainPage.html" class="logo f1">
+                <img class="topImg" src="../Photo/logo.png">
+            </a>
+        </div>
+
+        <div class="banner">
+
+        </div>
+
+        <div class="topTopic">
+            服务社会
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_01">
+                    <div class="timebox">
+                        <i>2022.9</i>
+                        <strong>01</strong>
+                    </div>
+                    <a href="./0901/">
+                    <h4>山东大学“心心相印”社会心理学健康教育团队开展第二次社会心理学调研</h4>
+                    <p>8月22日至31日，山东大学“心心相印”社会心理学健康教育团队开展第二次社会心理学调研，通过线上调研...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>30</strong>
+                    </div>
+                    <a href="./0830/0830.html">
+                    <h4>山东大学高举共产主义旗帜队开展社区宣传活动</h4>
+                    <p>8月28日，山东大学高举共产主义旗帜宣讲团在严格遵守各地疫情防控要求的前提下，于东莞市、济南市、...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>28</strong>
+                    </div>
+                    <a href="./0830 2/0830 2.html">
+                    <h4>“初心迎廿”红色宣讲团系列宣讲活动顺利结束</h4>
+                    <p>为迎接党的二十大的到来，同时在实践中深挖红色资源，坚持守正创新，学习党的先进理论，感悟党的真理力量...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>29</strong>
+                    </div>
+                    <a href="./0829/0829.html">
+                    <h4>“传承红色基因，补足精神之钙”红色旅游调研顺利结束</h4>
+                    <p>为深入了解红色旅游的发展现状和价值，2022暑期社会实践文化调研队开展针对全国红色旅游景点的调研。在疫情常...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>27</strong>
+                    </div>
+                    <a href="./0827/0827.html">
+                    <h4>山东大学软件学院献血宣传社会实践小队开展无偿献血宣讲</h4>
+                    <p>山东大学软件学院献血宣传社会实践小队于8月26日20时在腾讯会议举办线上宣讲会，旨在普及无偿献血的有关...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>25</strong>
+                    </div>
+                    <a href="./0825/0825.html">
+                    <h4>山东大学软件学院“决明”团队赴烟台市进行乡村振兴调研</h4>
+                    <p>8月25日，山东大学软件学院“决明”调研团在各地乡镇农村开始了调研活动，此次调研活动为分散调研，调研内...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>24</strong>
+                    </div>
+                    <a href="./0824/0824.html">
+                    <h4>山东大学“MOLI”实践队开展第三次线上宣讲</h4>
+                    <p>8月22日，山东大学软件学院“MOLI”实践队以“为它代言，拒绝表演”为主题进行了第三次...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>24</strong>
+                    </div>
+                    <a href="./0824 2/0824 2.html">
+                    <h4>“传承弘扬文明，鼎立世界中华”——山东大学“天码行空”小队暑期实践活动顺利完成</h4>
+                    <p>应“百队百场进社区”大学生实践活动倡导，为深入了解社区群众对中国传统文化理解程度...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.8</i>
+                        <strong>22</strong>
+                    </div>
+                    <a href="./0822/0822.html">
+                    <h4>山东大学“溯·普”实践队前往临沂进行实地推普教育活动</h4>
+                    <p>8月22日，山东大学软件学院“溯·普”实践队前往山东省临沂市北城小学进行实地推普教育活动，...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="display: block">
+                <li class="new_02">
+                    <div class="timebox">
+                        <i>2022.7</i>
+                        <strong>14</strong>
+                    </div>
+                    <a href="./0714/0714.html">
+                    <h4>软件学院学工团队赴临沂开展暑期“三访”活动</h4>
+                    <p>为深学笃用习近平新时代中国特色社会主义思想，认真贯彻落实全国教育大会精神，深入推进“三全...</p>
+                </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tablediv" style="margin:0 auto 40px auto; padding-top:50px; width: 75%;">
+            <input type="hidden" name="actiontype" value="">
+            <input type="hidden" name="urltype" value="tree.TreeTempUrl">
+            <input type="hidden" name="wbtreeid" value="1103">
+
+            <div>
+                <a href="./导航页服务社会.html" class="Prev">首页</a>
+                <a href="./导航页服务社会.html" class="Prev">上页</a>
+                <a href="./导航页服务社会.html" class="Next">下页</a>
+                <a href="./导航页服务社会.html" class="Next">尾页</a>
+            </div>
+        </div>
+        </div>
+</body>
+
+</html>
